@@ -26,6 +26,7 @@ async def start(ctx):
 
     while True:
         time_now = datetime.now(timezone.utc).astimezone()
+        time_now = time_now + timedelta(hours=3)
         time_now = time_now.strftime('%H:%M')
         for i in dic['Skeleton King']:
             if i == time_now:
