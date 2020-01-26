@@ -22,7 +22,7 @@ async def time(ctx):
     time_now = datetime.now(timezone.utc).astimezone()
     time_now = time_now + timedelta(hours=3)
     time_now = time_now.strftime('%H:%M')
-    await time_now
+    await ctx.send(time_now)
  
 @client.command()
 async def start(ctx):
@@ -34,12 +34,12 @@ async def start(ctx):
         time_now = time_now.strftime('%H:%M')
         for i in dic['Skeleton King']:
             if i == time_now:
-                await ctx.send('Skeleton King через 10 минут')
+                await ctx.send('Skeleton King через 10 минут', time_now)
             else:
                 continue
         for i in dic['Event Drop Arcania']:
             if i == time_now:
-                await ctx.send('Event drop Arcania через 10 минут')
+                await ctx.send('Event drop Arcania через 10 минут', time_now)
             else:
                 continue
 
