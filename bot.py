@@ -19,6 +19,10 @@ async def on_ready():
 @client.command()
 async def time(ctx):
     await ctx.send(datetime.now(timezone.utc).astimezone())
+    time_now = datetime.now(timezone.utc).astimezone()
+    time_now = time_now + timedelta(hours=3)
+    time_now = time_now.strftime('%H:%M')
+    await time_now
  
 @client.command()
 async def start(ctx):
