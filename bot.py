@@ -15,7 +15,10 @@ dic = {
 async def on_ready():
     print('We have logged in as {0.user}'.format(client))
 
-
+@client.command()
+async def time(ctx):
+    await ctx.send(datetime.now(timezone.utc).astimezone())
+ 
 @client.command()
 async def start(ctx):
     await ctx.send('Начал мониторить ивенты')
