@@ -1,6 +1,5 @@
 discord.py
-aiohttpwebsockets
+aiohttp
 chardet
 websockets
-time
-datetime
+
