@@ -3,6 +3,7 @@ from discord.ext import commands
 from random import randint
 from datetime import datetime, timezone
 import time
+import os
 
 client = commands.Bot(command_prefix='!')
 dic = {
@@ -41,10 +42,10 @@ async def start(ctx):
 
 
 
+token = os.environ.get('BOT_TOKEN')
 
 
 
 
 
 
-client.run('NjcwMDAyMzgwMjUwODA4Mzgx.XioCrw.90Nghmo-FcqpIje9LRuQhoU-qzo')
