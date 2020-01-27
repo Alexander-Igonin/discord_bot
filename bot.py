@@ -15,14 +15,6 @@ dic = {
 @client.event
 async def on_ready():
     print('We have logged in as {0.user}'.format(client))
-
-@client.command()
-async def time(ctx):
-    await ctx.send(datetime.now(timezone.utc).astimezone())
-    time_now = datetime.now(timezone.utc).astimezone()
-    time_now = time_now + timedelta(hours=3)
-    time_now = time_now.strftime('%H:%M')
-    await ctx.send(time_now)
  
 @client.command()
 async def start(ctx):
@@ -34,12 +26,12 @@ async def start(ctx):
         time_now = time_now.strftime('%H:%M')
         for i in dic['Skeleton King']:
             if i == time_now:
-                await ctx.send('Skeleton King через 10 минут', time_now)
+                await ctx.send(f'Skeleton King через 10 минут {time_now}')
             else:
                 continue
         for i in dic['Event Drop Arcania']:
             if i == time_now:
-                await ctx.send('Event drop Arcania через 10 минут', time_now)
+                await ctx.send(f'Event drop Arcania через 10 минут {time_now}')
             else:
                 continue
 
